@@ -10,7 +10,7 @@ import java.time.Duration;
 public class Base {
 
     public static final long waitingTime = 30;
-    static WebDriver driver;
+    static WebDriver driver = MyTest.driver;
     public static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitingTime));
 
     public static void click(By selector) { wait.until(ExpectedConditions.elementToBeClickable(selector)).click(); }
