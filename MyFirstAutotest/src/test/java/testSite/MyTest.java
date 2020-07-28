@@ -4,23 +4,19 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import util.Browsers;
 import util.Buttons;
 import util.WebDriverFactory;
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
+import static util.WebElementAction.waitingTime;
 
 public class MyTest {
 
     public static WebDriver driver;
-    public static final long waitingTime = 30;
-    public static WebDriverWait wait;
 
     @BeforeClass
     public static void setUpBrowser() {
         driver = WebDriverFactory.getDriver(Browsers.CHROME);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(waitingTime));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(waitingTime, TimeUnit.SECONDS);
     }
