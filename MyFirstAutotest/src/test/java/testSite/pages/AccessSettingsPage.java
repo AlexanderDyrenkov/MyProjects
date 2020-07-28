@@ -1,4 +1,4 @@
-package testSite;
+package testSite.pages;
 
 import org.openqa.selenium.By;
 import util.Buttons;

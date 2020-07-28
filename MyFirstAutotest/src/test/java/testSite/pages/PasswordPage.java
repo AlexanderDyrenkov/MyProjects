@@ -1,7 +1,7 @@
-package testSite;
+package testSite.pages;
 
 import org.openqa.selenium.By;
-import util.WebElementAction;
+import testSite.base.Base;
 
 public class PasswordPage {
 
@@ -10,8 +10,8 @@ public class PasswordPage {
     static final By buttonMain = By.xpath("//a[@href=\"./\" and .//div[contains(text(), \"Главная\")] and @data-nav-type=\"9\"]");
 
     public static void password(String strPassword){
-        WebElementAction.send(password, strPassword, buttonNext);
-        WebElementAction.click(buttonMain);
+        Base.send(password, strPassword, buttonNext);
+        Base.click(buttonMain);
     }
 
 }

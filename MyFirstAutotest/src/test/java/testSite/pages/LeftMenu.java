@@ -1,11 +1,11 @@
-package testSite;
+package testSite.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import util.Buttons;
-import util.WebElementAction;
+import testSite.base.Base;
 
-public class LeftMenu {
+public class LeftMenu extends Base{
 
     static final By buttonMain = By.xpath("//c-wiz[@data-savescroll = \"0\" and not(@data-savedfocusid)] //a[@href=\"./\" and .//div[contains(text(), \"Главная\")] and @data-nav-type=\"9\"]");
     static final By buttonPersonalInfo = By.xpath("//c-wiz[@data-savescroll = \"0\" and not(@data-savedfocusid)] //a[@href=\"personal-info\" and .//div[contains(text(), \"Личная информация\")] and .//img[@data-atf=\"true\"]]");
@@ -16,26 +16,26 @@ public class LeftMenu {
 
     public static void pressButton (By mainHeader, String keyWord, Buttons button) {
 
-        Assert.assertTrue(WebElementAction.find(mainHeader).contains(keyWord));
+        Assert.assertTrue(Base.find(mainHeader).contains(keyWord));
 
         switch (button) {
             case Главная:
-                WebElementAction.click(buttonMain);
+                click(buttonMain);
                 break;
             case Личная_информация:
-                WebElementAction.click(buttonPersonalInfo);
+                click(buttonPersonalInfo);
                 break;
             case Данные_и_персонализация:
-                WebElementAction.click(buttonDataAndPersonalization);
+                click(buttonDataAndPersonalization);
                 break;
             case Безопасность:
-                WebElementAction.click(buttonSecurity);
+                click(buttonSecurity);
                 break;
             case Настройки_доступа:
-                WebElementAction.click(buttonAccessSettings);
+                click(buttonAccessSettings);
                 break;
             case Платежи_и_подписки:
-                WebElementAction.click(buttonPaymentsAndSubscriptions);
+                click(buttonPaymentsAndSubscriptions);
                 break;
             default:
                 break;

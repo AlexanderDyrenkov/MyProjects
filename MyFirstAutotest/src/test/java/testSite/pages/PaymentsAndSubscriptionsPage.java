@@ -1,6 +1,7 @@
-package testSite;
+package testSite.pages;
 
 import org.openqa.selenium.By;
+import testSite.pages.LeftMenu;
 import util.Buttons;
 
 public class PaymentsAndSubscriptionsPage {

@@ -1,7 +1,7 @@
-package testSite;
+package testSite.pages;
 
 import org.openqa.selenium.By;
-import util.WebElementAction;
+import testSite.base.Base;
 
 public class LoginPage {
 
@@ -9,7 +9,7 @@ public class LoginPage {
     static final By buttonNext = By.xpath("//button[.//span[contains(text(), \"Далее\")]]");
 
     public static void username(String strUserName){
-        WebElementAction.send(userName, strUserName, buttonNext);
+        Base.send(userName, strUserName, buttonNext);
     }
 
 }

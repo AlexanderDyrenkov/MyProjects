@@ -1,4 +1,4 @@
-package util;
+package testSite.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,10 +7,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import testSite.MyTest;
 import java.time.Duration;
 
-public class WebElementAction {
+public class Base {
 
     public static final long waitingTime = 30;
-    static WebDriver driver = MyTest.driver;
+    static WebDriver driver;
     public static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitingTime));
 
     public static void click(By selector) { wait.until(ExpectedConditions.elementToBeClickable(selector)).click(); }

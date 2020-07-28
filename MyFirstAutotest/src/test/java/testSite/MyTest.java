@@ -4,11 +4,12 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import testSite.pages.*;
 import util.Browsers;
 import util.Buttons;
 import util.WebDriverFactory;
 import java.util.concurrent.TimeUnit;
-import static util.WebElementAction.waitingTime;
+import static testSite.base.Base.waitingTime;
 
 public class MyTest {
 

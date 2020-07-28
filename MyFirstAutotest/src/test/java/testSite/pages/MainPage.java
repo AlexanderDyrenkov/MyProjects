@@ -1,8 +1,8 @@
-package testSite;
+package testSite.pages;
 
 import org.openqa.selenium.By;
 import util.Buttons;
-import util.WebElementAction;
+import testSite.base.Base;
 
 public class MainPage {
 
@@ -10,6 +10,6 @@ public class MainPage {
     static final String keyWord = "Добро пожаловать";
 
     public static void pressButton(Buttons button) { LeftMenu.pressButton(mainHeader, keyWord, button); }
-    public static void setAvatar() { WebElementAction.click(By.xpath("//c-wiz[@data-savescroll = \"0\" and not(@data-savedfocusid)] //button[@aria-label=\"изменить фото профиля\"]")); }
+    public static void setAvatar() { Base.click(By.xpath("//c-wiz[@data-savescroll = \"0\" and not(@data-savedfocusid)] //button[@aria-label=\"изменить фото профиля\"]")); }
 
 }
